@@ -1,0 +1,6 @@
+first_name,last_name,email_address,reporting_to_email_address
+Fred,Flintstone,fred@gmail.com,nate@hotmail.com
+Barney,Rubble,barney@gmail.com,nate@hotmail.com
+Nate,Slate,nate@hotmail.com,god@hotmail.com
+God,Almighty,god@hotmail.com
+
