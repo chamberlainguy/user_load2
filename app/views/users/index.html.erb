@@ -1,0 +1,42 @@
+<%= flash[:notice] %>
+<table>
+	<thead>
+		<tr>
+			<th>Id</th>
+			<th>First_Name</th>
+			<th>Last_Name</th>
+			<th>Email_Address</th>
+			<th>Reporting_To_User Id</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @users.each do |user| %>
+			<tr>
+				<td><%= user.id %></td>
+				<td><%= user.first_name %></td>
+				<td><%= user.last_name %></td>
+				<td><%= user.email_address %></td>
+				<% if user.reports_to_user.present? %>
+					<td><%= user.reports_to_user.id %></td>
+				<% else %>
+					<td></td>
+				<% end %>
+			</tr>
+		<% end %>	
+	</tbody>
+</table>
+
+<div>
+	<h4>Import some User Data!</h4>
+	<%= form_tag import_users_path, multipart: true do %>
+		<%= file_field_tag :file %>
+		<%= submit_tag "Import CSV" %>
+	<% end %>
+</div>		
+
+
+
+
+
+
+				
