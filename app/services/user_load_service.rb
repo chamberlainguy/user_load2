@@ -45,6 +45,7 @@ class UserLoadService
 						if row['reporting_to_email_address'].present? 
 		 						add_boss boss, row['reporting_to_email_address']
 		 				end
+		 				return
 		 			end
 		 		end	
 		 	end	
